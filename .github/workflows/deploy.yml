@@ -21,6 +21,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 20
+    
+    - name: Verify environment variables
+      run: |
+        echo "Service ID: ${{ secrets.SERVICE_ID }}"
+        echo "API Key: ${{ secrets.API_KEY }}"
 
     - name: Cache Node.js modules
       uses: actions/cache@v3
