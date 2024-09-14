@@ -1,11 +1,8 @@
-// app/page.tsx または app/blog/page.tsx
-
 import { MyClient } from "./_src/libs/client";
 
 export async function generateStaticParams() {
   const response = await MyClient.get({ endpoint: "blog" });
 
-  // すべてのページのパスを指定
   return response.contents.map((item: any) => ({
     id: item.id
   }));
