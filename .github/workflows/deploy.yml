@@ -51,6 +51,6 @@ jobs:
       run: |
         lftp -d -c "
         open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER
-        mirror -R --delete -x \".htaccess\" ./out /
+        mirror -R --delete -x \".htaccess\" ./dist /
         bye
         " || true
