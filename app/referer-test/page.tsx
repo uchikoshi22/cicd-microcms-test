@@ -1,5 +1,6 @@
 'use client';
 
+import LocationSearchComponent from "@/app/_src/features/location-search-component";
 import { useEffect, useState } from "react";
 
 const SearchQueryChecker = () => {
@@ -19,7 +20,16 @@ const SearchQueryChecker = () => {
   }, []);
 
   return (
-    <p>Referrer: <span style={{color: "red"}}>{referrer}</span></p>
+    <>
+      <div style={{marginBottom: "50px"}}>
+        <p>Referrer: <span style={{color: "red"}}>{referrer}</span></p>
+      </div>
+
+      <div>
+        <LocationSearchComponent />
+      </div>
+    </>
+
   )
 };
 
