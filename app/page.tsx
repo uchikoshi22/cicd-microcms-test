@@ -1,31 +1,21 @@
-import { MyClient } from "./_src/libs/client";
+import SearchQueryChecker from "@/app/referer-test/page";
 
-export async function generateStaticParams() {
-  const response = await MyClient.get({ endpoint: "blog" });
-
-  return response.contents.map((item: any) => ({
-    id: item.id
-  }));
-}
-
-const Home = async() => {
-  const response = await MyClient.get({ endpoint: "blog" });
+const PageHome = async() => {
 
   return (
     <>
-      {response.contents ? (
-        <ul>
-          {response.contents.map((item: any) => (
-            <li key={item.id}>
-              <a href={`/${item.id}.html`}>
-                {item.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      ) : null}
+      <h1>Laboratory @zzlabs.net</h1>
+      <section>
+        <h2>Greeting</h2>
+        <p>Welcome to zzlabs&apos; laboratory.</p>
+        <p></p>
+        <p>Thanx</p>
+        <div>
+          <SearchQueryChecker />
+        </div>
+      </section>
     </>
   );
 }
 
-export default Home;
+export default PageHome;
