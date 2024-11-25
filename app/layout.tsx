@@ -10,7 +10,6 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <footer>Please contact me. I am located in 福岡.</footer>
       </body>
     </html>
   );

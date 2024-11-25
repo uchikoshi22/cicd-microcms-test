@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://labs.zzlabs.net/sitemap.xml
